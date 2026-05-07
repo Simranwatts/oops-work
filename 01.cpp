@@ -1,4 +1,5 @@
-#include <iostream> using namespace std;
+#include <iostream> 
+using namespace std;
 // Inline functions for arithmetic operations 
 inline int add(int a, int b) {
   return a + b;
