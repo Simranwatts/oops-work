@@ -1,24 +1,24 @@
-#include <iostream>
+#include <iostream> 
 using namespace std;
 
-class SI{
-    private:
-        float s;
-    
-    public:
-        SI(float p, float r, int t = 1){
-            s = (p*r*t)/100;
-        }
-        
-        float simple_interest(){
-            return this-> s;
-        }
-};
+// Function with default arguments
+float simpleInterest(float principal, float rate = 5.0, float time = 2.0) {
+return (principal * rate * time) / 100;
+}
+
 int main() {
-   float amount = 123.65, r = 6.4, t = 2;
-   SI s1(amount, r);
-   SI s2(amount, r, t);
-   cout << "Simple Interest : "<< s1.simple_interest() << endl;
-   cout << "Simple Interest : "<< s2.simple_interest() << endl;
-    return 0;
+float p;
+cout << "Enter Principal Amount: "; 
+cin >> p;
+
+// Using default rate and time
+cout << "\nSimple Interest (using default rate & time): "<< simpleInterest(p) << endl;
+
+// Providing custom rate
+cout << "Simple Interest (custom rate = 10%): "<< simpleInterest(p, 10) << endl;
+
+// Providing all values
+cout << "Simple Interest (custom rate & time = 10%, 3 years): "<< simpleInterest(p, 10, 3) << endl;
+
+return 0;
 }
